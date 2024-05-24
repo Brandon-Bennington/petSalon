@@ -1,44 +1,32 @@
-let jocasHouse ={
-        name:"Joca's House",
-        phone:"666-666-6666",
-        hours:{
-            open:"9:00 am",
-            close:"9:00 pm",
+let jocasHouse ={//obj
+        name:"Joca's House",//var
+        phone:"666-666-6666",//var
+        hours:{//obj
+            open:"9:00 am",//var
+            close:"9:00 pm",//var
     },
-    pets: [//array
-        {
-            name:"Scooby", 
-            age: 12,
-            gender:"Male",
-            service:"Grooming"
-        },
-        {
-            name:"Scrappy",
-            age:3,
-            gender:"Male",
-            service:"Grooming",
-        },
-        {
-            name:"Goofy",
-            age:14,
-            gender:"Male",
-            service:"Nails cut",
-        },
-    ]
+    pets: []
+}
+//constructor ...
+function Pet(name,age,gender,service){
+    //properties = parameter;
+    this.name = name;
+    this.age=age;
+    this.gender=gender;
+    this.service=service;
 }
 
-function displayName(){
-    let names="";
-    //suggestion:use a logo
-    for(let i=0;i<3;i++){
-        names+=`<p> ${jocasHouse.pets[i].name} </p>`;
-        console.log(names)
-    }
-    document.getElementById("petNamaes").innerHTML=names;
+function register(){
+
 }
 
-function countPets(){
-    console.log(jocasHouse.pets.length);
+function init(){
+    let pet1 = new Pet("Scooby", 79, "Male", "Grooming");//declaring obj 
+    jocasHouse.pets.push(pet1);
+    console.log(pet1);
+
 }
+
+window.onload=init;//waiting to render the HTML 
 
 
