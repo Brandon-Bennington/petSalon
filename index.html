@@ -3,35 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles/mystyle.css">
+    <title>Joca's House</title>
 </head>
 <body>
-    <header>
-        <div>
-            <h1>Jocas House</h1>
-    
+    <header class="site-init">
+        <div class="menu-bar">
+            <h1>Joca's House</h1>
             <nav>
                 <a href="index.html">Home</a>
                 <a href="register.html">Register</a>
             </nav>
         </div>
-        <div>
-            <div>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias sit explicabo voluptatem aut nemo repellat sequi facilis distinctio! Repellat repellendus numquam quidem odit vero sunt qui. Culpa amet asperiores expedita?</p>
-            </div>
-            <div>
-                <img src="jocasHouse.png" alt="">
-            </div>
-        </div>
     </header>
-
     <main>
-
+        <div class="container">
+            <h2>Register Your Pet</h2>
+            <div class="input-control">
+                <label>Name:*</label>
+                <input type="text" id="txtName">
+            </div>
+            <div class="input-control">
+                <label>Age:</label>
+                <input type="number" id="txtAge">
+            </div>
+            <div class="input-control">
+                <label>Gender:</label>
+                <input type="text" id="txtGender">
+            </div>
+            <div class="input-control">
+                <label>Breed:</label>
+                <input type="text" id="txtBreed">
+            </div>
+            <div class="input-control">
+                <label>Service:*</label>
+                <select id="txtService">
+                    <option value="" selected disabled>-- Select an option --</option>
+                    <option value="Grooming">Grooming</option>
+                    <option value="Training">Training</option>
+                    <option value="Health Check">Health Check</option>
+                </select>
+            </div>
     </main>
-
     <footer>
-
     </footer>
-    <script src="./scripts/register.js"></script>
+    <script src="scripts/register.js"></script>
 </body>
 </html>
