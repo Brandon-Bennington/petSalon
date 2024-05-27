@@ -1,22 +1,42 @@
-function displayCards(){
-    //declare the variables
-    let card="";
-    const petDiv=document.getElementById("petDiv");
-    //travel the array of pets
-    for(let i=0;i<3;i++){
-        let pet = jocasHouse.pets[i];
-        //create the HTML template
-        card+=`
-            <div class="petCard">
-                <h4>Name: ${pet.name}</h4>
-                <h4>Age: ${pet.age}</h4>
-                <h4>Gender: ${pet.gender}</h4>
-                <h4>Breed: ${pet.breed}</h4>
-                <h4>Service: ${pet.service}</h4>
-            </div>
-        `;
-        petDiv.innerHTML=card;
-    }
-    //insert the template into the HTML 
+function displayRows() {
+    const petTable = document.getElementById("petTable");
+    petTable.innerHTML = "";
 
+    let dogCount = 0;
+    let catCount = 0;
+    let otherCount = 0;
+
+    jocasHouse.pets.forEach(pet => {
+        let row = `
+            <tr>
+                <td>${pet.name}</td>
+                <td>${pet.age}</td>
+                <td>${pet.gender}</td>
+                <td>${pet.breed}</td>
+                <td>${pet.species}</td>
+                <td>${pet.service}</td>
+            </tr>
+        `;
+        petTable.innerHTML += row;
+
+        switch (pet.species.toLowerCase()) {
+            case "dog":
+                dogCount++;
+                break;
+            case "cat":
+                catCount++;
+                break;
+            default:
+                otherCount++;
+                break;
+        }
+    });
+
+    document.getElementById("dogCount").innerText = dogCount;
+    document.getElementById("catCount").innerText = catCount;
+    document.getElementById("otherCount").innerText = otherCount;
+}
+
+function displayTotalPets() {
+    document.getElementById("total").innerText = jocasHouse.pets.length;
 }

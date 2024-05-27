@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,71 +9,75 @@
     <title>Joca's House</title>
 </head>
 <body>
-    <header class="site-init">
+    <header class="site-init bg-warning text-dark text-center py-4">
         <h1 id="site-title">Joca's House</h1>
         <div class="menu-bar">
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="register.html">Register</a>
+            <nav class="nav justify-content-center">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="register.html">Register</a>
             </nav>
         </div>
     </header>
     <main>
-        <div class="form-wrapper">
-            <div class="container">
-                <h2>Register Your Pet</h2>
-                <div class="input-control">
-                    <label for="txtName">Name:*</label>
-                    <input type="text" id="txtName">
+        <div class="container my-5">
+            <h2 class="text-center text-warning">Register Your Pet</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="txtName" class="form-label">Name:</label>
+                    <input type="text" id="txtName" class="form-control">
                 </div>
-                <div class="input-control">
-                    <label for="txtAge">Age:</label>
-                    <input type="number" id="txtAge">
+                <div class="mb-3">
+                    <label for="txtAge" class="form-label">Age:</label>
+                    <input type="number" id="txtAge" class="form-control">
                 </div>
-                <div class="input-control">
-                    <label for="txtGender">Gender:</label>
-                    <input type="text" id="txtGender">
+                <div class="mb-3">
+                    <label for="txtGender" class="form-label">Gender:</label>
+                    <select id="txtGender" class="form-select">
+                        <option value="" selected disabled>-- Select Gender --</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
                 </div>
-                <div class="input-control">
-                    <label for="txtBreed">Breed:</label>
-                    <input type="text" id="txtBreed">
+                <div class="mb-3">
+                    <label for="txtBreed" class="form-label">Breed:</label>
+                    <input type="text" id="txtBreed" class="form-control">
                 </div>
-                <div class="input-control">
-                    <label for="txtService">Service:*</label>
-                    <select id="txtService">
+                <div class="mb-3">
+                    <label for="txtSpecies" class="form-label">Species:</label>
+                    <input type="text" id="txtSpecies" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="txtService" class="form-label">Service:</label>
+                    <select id="txtService" class="form-select">
                         <option value="" selected disabled>-- Select an option --</option>
                         <option value="Grooming">Grooming</option>
                         <option value="Training">Training</option>
                         <option value="Health Check">Health Check</option>
                     </select>
                 </div>
-                <div class="btn-container">
-                    <button onclick="register();">Register</button>
+                <div class="text-end">
+                    <button type="button" class="btn btn-primary" onclick="register();">Register</button>
                 </div>
-                <div id="petDiv">
-
-                </div>
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Age</th>
-                        </tr>
-                    </thead>
-                    <tbody id="petTable">
-                        <tr>
-                            <td>Test</td>
-                            <td>99</td>
-                        </tr>
-                    </tbody>
-                </table>
-        <div class="info">
-                    <p>Total = <span id="total">1000</span></p>
-                </div>
-
+            </form>
+            <div id="speciesCount" class="mt-4">
+                <p>Dogs: <span id="dogCount" class="badge bg-primary">0</span></p>
+                <p>Cats: <span id="catCount" class="badge bg-primary">0</span></p>
+                <p>Others: <span id="otherCount" class="badge bg-primary">0</span></p>
             </div>
-            </div>
+            <table class="table table-striped mt-4">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Breed</th>
+                        <th>Species</th>
+                        <th>Service</th>
+                    </tr>
+                </thead>
+                <tbody id="petTable">
+                </tbody>
+            </table>
         </div>
     </main>
     <script src="scripts/register.js"></script>
