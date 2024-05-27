@@ -61,7 +61,7 @@ The homepage displays a welcome message, the total number of registered pets, an
 
 The registration page allows users to register their pets. It displays a form to enter pet details and a table of registered pets with options to edit and delete entries.
 
-![Registration Page Screenshot](img/registration_page.png)
+![Registration Page Screenshot](img/registration.png)
 
 
 ## License
