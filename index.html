@@ -9,7 +9,7 @@
 </head>
 <body>
     <header class="site-init bg-warning text-dark text-center py-4">
-        <h1 id="site-title">Joca's House</h1>
+        <img src="img/jocasHouse.png" alt="Joca's House" class="img-fluid">
         <div class="menu-bar">
             <nav class="nav justify-content-center">
                 <a class="nav-link" href="index.html">Home</a>
@@ -17,28 +17,64 @@
             </nav>
         </div>
     </header>
-    <main>
-        <div class="container my-5">
-            <h2 class="text-center text-warning">Welcome to Joca's House</h2>
-            <p class="text-center">Your one-stop solution for pet grooming, training, and health check services. We care for your pets as much as you do!</p>
-            <div class="text-center my-4">
-                <h3>Total Animals Registered: <span id="totalAnimals" class="badge bg-primary">0</span></h3>
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-12 col-md-6 offset-md-3">
+                <div class="bg-light p-4 mb-5 rounded shadow-sm">
+                    <h2 class="text-center text-warning">Welcome to Joca's House</h2>
+                    <p class="text-center">Your one-stop solution for pet grooming, training, and health check services. We care for your pets as much as you do!</p>
+                </div>
             </div>
-            <div class="text-center my-4">
-                <h3 class="text-warning">Last Added Animal</h3>
-                <div id="lastAnimalCard" class="card mx-auto" style="width: 18rem;">
-                    <img src="images/default.png" class="card-img-top" alt="Animal Image" id="lastAnimalImage">
-                    <div class="card-body">
-                        <h5 class="card-title" id="lastAnimalName">Name</h5>
-                        <p class="card-text" id="lastAnimalDetails">Details will be shown here</p>
+            <div class="col-12 col-md-6 offset-md-3">
+                <div class="bg-light p-4 mb-5 rounded shadow-sm">
+                    <h3 class="text-center text-warning">Total Animals Registered: <span id="totalAnimals" class="badge bg-primary">0</span></h3>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 offset-md-3">
+                <div class="bg-light p-4 mb-5 rounded shadow-sm">
+                    <h3 class="text-center text-warning">Latest Registered Animal</h3>
+                    <div id="lastAnimalCard" class="card mx-auto" style="width: 18rem;">
+                        <img src="img/default.png" class="card-img-top" alt="Animal Image" id="lastAnimalImage">
+                        <div class="card-body text-center">
+                            <h5 class="card-title" id="lastAnimalName">Name</h5>
+                            <div id="lastAnimalDetails" class="text-start">
+                                <div class="row">
+                                    <div class="col-6"><strong>Age:</strong></div>
+                                    <div class="col-6" id="animalAge"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6"><strong>Gender:</strong></div>
+                                    <div class="col-6" id="animalGender"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6"><strong>Breed:</strong></div>
+                                    <div class="col-6" id="animalBreed"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6"><strong>Species:</strong></div>
+                                    <div class="col-6" id="animalSpecies"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6"><strong>Service:</strong></div>
+                                    <div class="col-6" id="animalService"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="text-center my-4">
-                <a href="register.html" class="btn btn-primary">Register Your Pet</a>
+            <div class="col-12 col-md-6 offset-md-3 text-center">
+                <div class="bg-light p-4 mb-5 rounded shadow-sm">
+                    <h3 class="text-center text-warning">Register Your Pet</h3>
+                    <p>Click the button below to register your pet for grooming, training, or health check services.</p>
+                    <a href="register.html" class="btn btn-primary">Register Your Pet</a>
             </div>
         </div>
     </main>
+    <footer class="bg-warning text-dark text-center py-3">
+        <p>Joca's House &copy; 2024. All Rights Reserved.</p>
+        <p>Contact us: 666-666-6666 | Email: info@jocashouse.com</p>
+    </footer>
     <script src="scripts/index.js"></script>
 </body>
 </html>

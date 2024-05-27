@@ -75,6 +75,61 @@ function register() {
     }
 }
 
+function deletePet(index) {
+    if (confirm("Are you sure you want to delete this pet?")) {
+        jocasHouse.pets.splice(index, 1);
+        displayRows();
+    }
+}
+
+function editPet(index) {
+    let pet = jocasHouse.pets[index];
+    document.getElementById("txtName").value = pet.name;
+    document.getElementById("txtAge").value = pet.age;
+    document.getElementById("txtGender").value = pet.gender;
+    document.getElementById("txtBreed").value = pet.breed;
+    document.getElementById("txtSpecies").value = pet.species;
+    document.getElementById("txtService").value = pet.service;
+
+    // Temporarily remove the pet from the list for editing
+    jocasHouse.pets.splice(index, 1);
+
+    // Change the register button to update button
+    let registerButton = document.querySelector('button[onclick="register();"]');
+    registerButton.textContent = "Update";
+    registerButton.setAttribute("onclick", `update(${index});`);
+}
+
+function update(index) {
+    let inputName = document.getElementById("txtName").value;
+    let inputAge = document.getElementById("txtAge").value;
+    let inputGender = document.getElementById("txtGender").value;
+    let inputBreed = document.getElementById("txtBreed").value;
+    let inputSpecies = document.getElementById("txtSpecies").value;
+    let inputService = document.getElementById("txtService").value;
+
+    let updatedPet = new Pet(inputName, inputAge, inputGender, inputBreed, inputSpecies, inputService);
+    if (isValid(updatedPet)) {
+        jocasHouse.pets.splice(index, 0, updatedPet);
+        displayRows();
+
+        // Change the update button back to register button
+        let updateButton = document.querySelector('button[onclick^="update"]');
+        updateButton.textContent = "Register";
+        updateButton.setAttribute("onclick", "register();");
+
+        // Clear the form
+        document.getElementById("txtName").value = "";
+        document.getElementById("txtAge").value = "";
+        document.getElementById("txtGender").value = "";
+        document.getElementById("txtBreed").value = "";
+        document.getElementById("txtSpecies").value = "";
+        document.getElementById("txtService").value = "";
+    } else {
+        alert("Please fill in the required fields.");
+    }
+}
+
 function init() {
     let pet1 = new Pet("Scooby", 15, "Male", "Great Dane", "dog", "Grooming");
     let pet2 = new Pet("Scrappy", 3, "Male", "Great Dane", "dog", "Training");

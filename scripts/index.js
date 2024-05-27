@@ -20,14 +20,23 @@ function updateLastAddedAnimal() {
     if (jocasHouse.pets.length > 0) {
         let lastAnimal = jocasHouse.pets[jocasHouse.pets.length - 1];
         document.getElementById("lastAnimalName").innerText = lastAnimal.name;
-        document.getElementById("lastAnimalDetails").innerText = `Age: ${lastAnimal.age}, Gender: ${lastAnimal.gender}, Breed: ${lastAnimal.breed}, Species: ${lastAnimal.species}, Service: ${lastAnimal.service}`;
-        
-        let imageSrc = `images/${lastAnimal.species.toLowerCase()}.png`;
+
+        document.getElementById("animalAge").innerText = lastAnimal.age;
+        document.getElementById("animalGender").innerText = lastAnimal.gender;
+        document.getElementById("animalBreed").innerText = lastAnimal.breed;
+        document.getElementById("animalSpecies").innerText = lastAnimal.species.charAt(0).toUpperCase() + lastAnimal.species.slice(1);
+        document.getElementById("animalService").innerText = lastAnimal.service;
+
+        let imageSrc = `img/${lastAnimal.gender.charAt(0).toLowerCase()}${lastAnimal.species.charAt(0).toUpperCase() + lastAnimal.species.slice(1)}.png`;
         document.getElementById("lastAnimalImage").src = imageSrc;
     } else {
         document.getElementById("lastAnimalName").innerText = "No animals registered yet";
-        document.getElementById("lastAnimalDetails").innerText = "";
-        document.getElementById("lastAnimalImage").src = "images/default.png";
+        document.getElementById("animalAge").innerText = "";
+        document.getElementById("animalGender").innerText = "";
+        document.getElementById("animalBreed").innerText = "";
+        document.getElementById("animalSpecies").innerText = "";
+        document.getElementById("animalService").innerText = "";
+        document.getElementById("lastAnimalImage").src = "img/default.png";
     }
 }
 

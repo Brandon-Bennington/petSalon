@@ -6,7 +6,7 @@ function displayRows() {
     let catCount = 0;
     let otherCount = 0;
 
-    jocasHouse.pets.forEach(pet => {
+    jocasHouse.pets.forEach((pet, index) => {
         let row = `
             <tr>
                 <td>${pet.name}</td>
@@ -15,6 +15,10 @@ function displayRows() {
                 <td>${pet.breed}</td>
                 <td>${pet.species}</td>
                 <td>${pet.service}</td>
+                <td class="actions-cell">
+                    <button class="btn btn-warning btn-sm mb-2" onclick="editPet(${index})">Edit</button>
+                    <button class="btn btn-danger btn-sm" onclick="deletePet(${index})">Delete</button>
+                </td>
             </tr>
         `;
         petTable.innerHTML += row;
