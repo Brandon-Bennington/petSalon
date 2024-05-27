@@ -40,7 +40,3 @@ function displayRows() {
     document.getElementById("catCount").innerText = catCount;
     document.getElementById("otherCount").innerText = otherCount;
 }
-
-function displayTotalPets() {
-    document.getElementById("total").innerText = jocasHouse.pets.length;
-}
