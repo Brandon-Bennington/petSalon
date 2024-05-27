@@ -1,91 +1,76 @@
-Joca's House
+# Joca's House
+
+![Project Version](https://img.shields.io/badge/version-1.0.0-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+
 Joca's House is a web application that allows users to register their pets for grooming, training, and health check services. Users can view the list of registered pets, edit their details, and delete entries. The application also displays the total number of registered pets and the latest registered pet.
 
-Features
-Register pets with details like name, age, gender, breed, species, and service.
-Display the list of registered pets in a table format.
-Edit and delete pet entries.
-Show the total number of registered pets.
-Display details of the latest registered pet.
-Technologies Used
-HTML
-CSS (Bootstrap for styling)
-JavaScript
-Project Structure
-arduino
-Copy code
-.
-├── index.html
-├── register.html
-├── styles
-│   └── mystyle.css
-├── scripts
-│   ├── index.js
-│   ├── register.js
-│   └── display.js
-└── img
-    ├── jocashouse.png
-    ├── fBird.png
-    ├── fCat.png
-    ├── fDog.png
-    ├── mBird.png
-    ├── mDog.png
-    ├── nCat.png
-    └── other.png
-Setup Instructions
-Clone the repository:
+## Table of Contents
 
-bash
-Copy code
-git clone <repository-url>
-Open index.html and register.html in a browser:
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Setup Instructions](#setup-instructions)
+- [Usage](#usage)
+- [License](#license)
+- [Contact](#contact)
 
-Open index.html to view the homepage.
-Open register.html to register pets.
-File Descriptions
-index.html
-The homepage of Joca's House, displaying a welcome message, total number of registered pets, the latest registered pet, and a link to the registration page.
+## Features
 
-register.html
-The pet registration page where users can fill out a form to add new pets. It also displays a table of registered pets with options to edit and delete entries.
+- Register pets with details like name, age, gender, breed, species, and service.
+- Display the list of registered pets in a table format.
+- Edit and delete pet entries.
+- Show the total number of registered pets.
+- Display details of the latest registered pet.
 
-styles/mystyle.css
-Custom CSS file for styling the application. It includes styles for the header, footer, forms, buttons, and tables.
+## Technologies Used
 
-scripts/index.js
-JavaScript file for the homepage. It initializes the total number of pets and updates the details of the latest registered pet.
+- HTML
+- CSS (Bootstrap for styling)
+- JavaScript
 
-scripts/register.js
-JavaScript file for the registration page. It handles the registration, validation, editing, and deletion of pet entries.
 
-scripts/display.js
-JavaScript file to dynamically generate and update the rows in the pets table based on the registered pets.
+## Setup Instructions
 
-How It Works
-Homepage (index.html)
-Header: Contains the Joca's House logo and navigation links to the home and registration pages.
-Main Section:
-Welcome Message: Displays a welcome message for Joca's House.
-Total Animals Registered: Shows the total number of registered pets.
-Latest Registered Animal: Displays details of the most recently registered pet in a card format.
-Footer: Contains contact information for Joca's House.
-Registration Page (register.html)
-Header: Contains the Joca's House logo and navigation links to the home and registration pages.
-Main Section:
-Registration Form: A form to register new pets with fields for name, age, gender, breed, species, and service.
-Pets Table: A table displaying the list of registered pets with options to edit and delete entries.
-Footer: Contains contact information for Joca's House.
-Scripts
-index.js: Initializes and updates the total number of pets and details of the latest registered pet.
-register.js: Manages pet registration, validation, editing, and deletion.
-display.js: Generates and updates the rows in the pets table dynamically.
-Screenshots
-Homepage
+1. **Clone the repository:**
 
-Registration Page
+    ```bash
+    git clone <repository-url>
+    ```
 
-Future Enhancements
-Add a backend to persist pet data.
-Integrate image generation for pets.
-Implement user authentication.
-Add search functionality for pets.
+2. **Navigate to the project directory:**
+
+    ```bash
+    cd jocashouse
+    ```
+
+3. **Open `index.html` and `register.html` in a browser:**
+
+    - Open `index.html` to view the homepage.
+    - Open `register.html` to register pets.
+
+## Usage
+
+### Homepage
+
+The homepage displays a welcome message, the total number of registered pets, and details of the latest registered pet.
+
+![Homepage Screenshot](img/homepage.png)
+
+### Registration Page
+
+The registration page allows users to register their pets. It displays a form to enter pet details and a table of registered pets with options to edit and delete entries.
+
+![Registration Page Screenshot](img/registration_page.png)
+
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+- Name: Brandon Bennington
+- Email: [brandonwbennington@gmail.com](mailto:brandonwbennington@gmail.com)
+- GitHub: [My GitHub Profile](https://github.com/bwbennington)
+
